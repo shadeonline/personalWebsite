@@ -1,0 +1,303 @@
+body {
+    /* Set a big Padding on top so that the Sticky Nav Bar will not cover any part of the content */
+    padding-top: 130px;
+
+}
+
+p,
+label {
+    /* Change fonts of all contents */
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h5,
+h4 {
+    /* Change Fonts of headers */
+    font-family: 'Zilla Slab', serif;
+    text-align : center;
+}
+
+
+/*********************************************************
+  ***************** Navbar section *************************
+  *********************************************************/
+
+/* Navbar properties */
+nav {
+    /* Fixed Position so that it is 'sticky' */
+    position        : fixed;
+    top             : 0;
+    width           : 100%;
+    background-color: rgb(255, 255, 255);
+    overflow        : hidden;
+    padding         : 30px 10px;
+    transition      : 0.3s;
+    /* z-index of 5 so that it will always overlap other elements */
+    z-index         : 5;
+
+}
+
+/* All Style links inside the navigation bar */
+.topnav a {
+    /* Always stay left */
+    float          : left;
+    /* Text Colour Black */
+    color          : rgb(0, 0, 0);
+    /* Text stays center */
+    text-align     : center;
+    padding        : 10px 20px 10px;
+    text-decoration: none;
+    top            : 50%;
+    /* 0.3s transition when Nav bar changes size when scrolling)*/
+    transition     : 0.3s;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: rgb(0, 0, 0, 0.5);
+}
+
+/* sidebar open link on left side of the Nav Bar  */
+#openSide {
+    font-size: 30px;
+}
+
+
+/* Centered Logo of 'University Chess Club'*/
+#logo {
+    float      : none;
+    position   : absolute;
+    /* Make the logo always stay centre */
+    top        : 50%;
+    left       : 50%;
+    transform  : translate(-50%, -50%);
+    font-size  : 30px;
+    /* Change Font of Logo */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* login and subscribe button on right of nav bar */
+.topnav-right {
+    float      : right;
+    /* set font size */
+    font-size  : 20px;
+    /* Allign text */
+    padding-top: 9px;
+}
+
+
+/* Responsive nav bar for smaller screens which hides the login link and subscribe link on the right*/
+@media screen and (max-width: 1030px) {
+    .topnav-right {
+        display: none;
+    }
+}
+
+
+
+/*********************************************************
+  ***************** Sidebar section ************************
+  *********************************************************/
+
+/* The sidebar menu */
+.sidebar {
+    /* 100% height of screen */
+    height          : 100%;
+    /* Set width to 0 for javascript manipulation*/
+    width           : 0;
+    /* Side bar will not be able to scroll */
+    position        : fixed;
+    /* Higher priority so that side bar will overlap Nav bar  */
+    z-index         : 10;
+    /* Coordinates for side bar location */
+    top             : 0;
+    left            : 0;
+    /*white Background*/
+    background-color: rgb(255, 255, 255);
+    /* Give Shadow to the sidebar to look nice */
+    box-shadow      : 0 0 100px 0 rgba(0, 0, 0, 0.7);
+    /* Disable horizontal scroll */
+    overflow-x      : hidden;
+    padding-top     : 60px;
+    /* 0.5 second transition effect when sidebar open up */
+    transition      : 0.5s;
+
+}
+
+/* Styling of sidebar links */
+.sidebar a {
+    padding        : 10px 30px 30px 90px;
+    text-decoration: none;
+    font-size      : 25px;
+    color          : black;
+    display        : block;
+    /* 0.3s transition effect when side bar opens */
+    transition     : 0.3s;
+}
+
+/* change their color of sidebar links when mouse over */
+.sidebar a:hover {
+    color: rgb(0, 0, 0, 0.5);
+}
+
+/* Position and style the close button make it fixed to top right corner of the side bar */
+#closeSide {
+    position   : absolute;
+    top        : 0;
+    right      : 25px;
+    font-size  : 36px;
+    margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+
+
+
+/*********************************************************
+  ***************** Footer Section ************************
+  *********************************************************/
+/* set padding and font size of footer */
+#footer {
+    padding   : 20px 20px;
+    text-align: center;
+    font-size : 12px
+}
+
+/* Make social media icons on the footer have a round border */
+#footer a {
+    padding      : 5px;
+    border       : solid 1px #E5E5E5;
+    border-radius: 360px;
+}
+
+/* Social media icons' Border glows when mouse hover over */
+#footer a:hover {
+    border    : solid 1px #0353a4;
+    box-shadow: 0 0 10px #0466c8;
+}
+
+
+
+
+/*********************************************************
+********************** Projects Page *********************
+*********************************************************/
+
+
+
+.projectsLayout {
+    text-align           : center;
+    padding-top          : 2em;
+    padding-bottom       : 3em;
+    justify-content      : center;
+    align-content        : center;
+    gap                  : 2em;
+    display              : grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-areas  :
+        '.       title           title           title        .'
+        '.      project1        project2        project3      .'
+        '.      project4        project5        project6      .'
+    ;
+}
+
+
+
+/* Reallignment of Grid Areas on index featured page when screen size change to 1000px or smaller */
+@media screen and (max-width: 1000px) {
+    .projectsLayout {
+        text-align           : center;
+        padding-top          : 2em;
+        padding-bottom       : 3em;
+        justify-content      : center;
+        align-content        : center;
+        gap                  : 2em;
+        display              : grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-areas  :
+            '.       title           title           title           title      .'
+            '.      project1        project1        project2        project2    .'
+            '.      project3        project3        project4        project4    .'
+            '.      project5        project5        project6        project6    .'
+        ;
+    }
+}
+
+
+/* Reallignment of Grid Areas on index featured page when screen size change to 700px or smaller */
+@media screen and (max-width: 700px) {
+    .projectsLayout {
+        text-align           : center;
+        padding-top          : 2em;
+        padding-bottom       : 3em;
+        justify-content      : center;
+        align-content        : center;
+        gap                  : 2em;
+        display              : grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-areas  :
+            '.       title           title           title        .'
+            '.      project1        project1        project1      .'
+            '.      project2        project2        project2      .'
+            '.      project3        project3        project3      .'
+            '.      project4        project4        project4      .'
+            '.      project5        project5        project5      .'
+            '.      project6        project6        project6      .'
+        ;
+    }
+}
+
+
+.title {
+    grid-area: title;
+}
+
+.project1 {
+    grid-area: project1;
+}
+
+.project2 {
+    grid-area: project2;
+}
+
+.project3 {
+    grid-area: project3;
+}
+
+.project4 {
+    grid-area: project4;
+}
+
+.project5 {
+    grid-area: project5;
+}
+
+.project6 {
+    grid-area: project6;
+}
+
+
+
+
+
+
+
+iframe {
+    width       : 1025px;
+    height      : 600px;
+    margin      : 0 auto;
+    display     : block;
+    border-style: none;
+}
