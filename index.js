@@ -27,6 +27,11 @@ app.get('/projects/2DSideScrollerGame', function (req, res) {
     res.render('2DSideScrollerGame', { title: '2DSideScrollerGame' });
 })
 
+app.get('/projects/inProgress', function (req, res) {
+    res.render('inProgress', { title: 'In Progress' });
+})
+
+
 
 
 //listen for any http request sent to u on server from port 3000.
