@@ -32,6 +32,10 @@ app.get('/projects/inProgress', function (req, res) {
 })
 
 
+app.get('/webproject', function (req, res) {
+    res.render('devices',{ title: 'Devices' });
+})
+
 
 
 //listen for any http request sent to u on server from port 3000.
