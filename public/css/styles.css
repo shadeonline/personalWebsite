@@ -34,7 +34,7 @@ h4 {
 /* Responsive nav bar for smaller screens which hides the login link and subscribe link on the right*/
 
 .body {
-    max-width: 500em;
+    max-width    : 500em;
     padding-left : 20%;
     padding-right: 20%;
 }
@@ -326,4 +326,14 @@ iframe {
     margin      : 0 auto;
     display     : block;
     border-style: none;
+}
+
+
+.icon {
+    width : 2em;
+    height: 2em;
+}
+
+.gitButton {
+    float: right;
 }
