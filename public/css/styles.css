@@ -17,23 +17,34 @@ h4 {
     /* Change Fonts of headers */
     font-family: 'Zilla Slab', serif;
     text-align : center;
-    padding: 1em;
+    padding    : 1em;
 }
 
-.body{
-    padding-left: 8%;
-    padding-right: 8%;
-}
 
-.profile{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    padding-top: 1em;
+
+.profile {
+    display       : block;
+    margin-left   : auto;
+    margin-right  : auto;
+    border-radius : 50%;
+    padding-top   : 1em;
     padding-bottom: 1em;
 }
 
+/* Responsive nav bar for smaller screens which hides the login link and subscribe link on the right*/
+
+.body {
+    max-width: 500em;
+    padding-left : 20%;
+    padding-right: 20%;
+}
+
+@media screen and (max-width: 1030px) {
+    .body {
+        padding-left : 8%;
+        padding-right: 8%;
+    }
+}
 
 /*********************************************************
   ***************** Navbar section *************************
