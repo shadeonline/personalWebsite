@@ -24,7 +24,11 @@ app.get('/about', function (req, res) {
 })
 
 app.get('/projects/2DSideScrollerGame', function (req, res) {
-    res.render('2DSideScrollerGame', { title: '2DSideScrollerGame' });
+    res.render('2DSideScrollerGame', { title: '2D Side Scroller Game' });
+})
+
+app.get('/projects/socialMediaSite', function (req, res) {
+    res.render('socialMediaSite', { title: 'Social Media Site' });
 })
 
 app.get('/projects/inProgress', function (req, res) {
